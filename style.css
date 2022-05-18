@@ -1,0 +1,409 @@
+body {
+	margin: 0;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+.container {
+	width: 100%;
+	height: 100%;
+	background: #fbf5e8;
+	animation: movimientoCiclico 30s;
+	animation-iteration-count: infinite;
+	/*transition: all 2s;*/
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+.trees {
+	background: url('img/forest.png');
+	width: 100%;
+	height: 444px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	position: absolute;
+	bottom: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.grass {
+	width: 100%;
+	height: 30px;
+	background: #283618;
+	/*border-radius: 50%;*/
+	bottom: 0px;
+	position: absolute;
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	z-index: 2;
+}
+
+.position {
+	width: 100%;
+	height: 200px;
+	bottom: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	position: absolute;
+}
+
+.plants {
+	width: 115px;
+	height: 200px;
+	background-repeat: no-repeat;
+	background-size: contain;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-left: 20px;
+	animation: hiding 30s;
+	animation-iteration-count: infinite;
+	z-index: 1;
+}
+
+.plant-one {
+	background: url('img/flower2.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+.plant-two {
+	background: url('img/cactus.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+.plant-three {
+	background: url('img/flower3.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+.plant-four {
+	background: url('img/flower.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+.plant-five {
+	background: url('img/flower4.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+.plant-six {
+	background: url('img/pendorcho.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+.plant-seven {
+	background: url('img/flower.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.clouds {
+	width: 130px;
+	height: 150px;
+	background: url('img/cloud.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	animation: cloudy 30s;
+	animation-iteration-count: infinite;
+}
+
+.sky {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	margin-top: 140px;
+	justify-content: space-around;
+}
+
+.skyTwo {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	margin-top: 380px;
+	justify-content: space-around;
+  	transform: scaleX(-1); 
+}
+
+.skyThree {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	margin-top: 160px;
+	justify-content: space-around;
+}
+
+.skyFour {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	margin-top: 330px;
+	justify-content: space-around;
+	transform: scaleX(-1); 
+}
+
+.star {
+	width: 100%;
+	height: 40%;
+	display: flex;
+}
+
+.sun {
+	background: url('img/sun.png');
+	width: 200px;
+	height: 200px;
+	background-repeat: no-repeat;
+	background-size: contain;
+	position: absolute;
+	margin-top: -170px;
+	right: 45%;
+	animation: day 30s;
+	animation-iteration-count: infinite;
+}
+
+.moon {
+	background: url('img/moon.png');
+	width: 130px;
+	height: 130px;
+	background-repeat: no-repeat;
+	background-size: contain;
+	position: absolute;
+	margin-top: -170px;
+	right: -10%;
+	animation: night 30s;
+	animation-iteration-count: infinite;
+}
+
+.termostatoPosition {
+	position:absolute;
+	background: url('img/temperatura.png');
+	width: 112px;
+	height: 112px;
+	right: 130px;
+	top: 190px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+}
+
+.termostato {
+	width: 112px;
+	height: 112px;
+	display: flex;
+	position: absolute;
+	background: url('img/termostato.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.temperture {
+	position: absolute;
+	width: 112px;
+	height: 0px;
+	background: #fbf5e8;
+	animation: clima 30s;
+	animation-iteration-count: infinite;
+}
+
+.climate {
+	position: absolute;
+	width: 150px;
+	height: 90px;
+	background: black;
+	top: 125px;
+	border-radius: 10%;
+	/*border-style: solid;
+	border-color: red;*/
+	font-size: 50px;
+	align-content: center;
+	align-self: center;
+	align-items: center;
+	font-family: sans-serif;
+	color: white;
+	opacity: 0.6;
+	text-align: center;
+	display: flex;
+	align-content: center;
+	justify-content: center;
+}
+
+.climActual {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 17px;
+	right: 3px;
+}
+
+@keyframes movimientoCiclico {
+	0% {
+		background: #fbf5e8; /*dia*/
+	}
+
+	10% {
+		background: #fbf5e8; /*dia*/
+	}
+
+	20% {
+		background: #656048; /*rtansicion1*/
+	}
+
+	30% {
+		background: #39372d; /*transicion2*/
+	}
+
+	40% {
+		background: #1d1d20; /*noche*/
+	}
+
+	50% {
+		background: #1d1d20; /*noche*/
+	}
+
+	60% {
+		background: #1d1d20; /*noche*/
+	}
+
+	70% {
+		background: #39372d; /*transicion2*/
+	}
+
+	80% {
+		background: #656048; /*transision1*/
+	}
+
+	90% {
+		background: #fbf5e8; /*dia*/
+	}
+
+	100% {
+		background: #fbf5e8; /*dia*/
+	}
+}
+
+@keyframes hiding {
+	0% {
+		margin-bottom: 0;
+	}
+
+	50% {
+		margin-bottom: -220px;
+	}
+
+	100% {
+		margin-bottom: 0;
+	}
+}
+
+@keyframes cloudy {
+	0% {
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes day {
+	0% {
+		right: 45%;
+		opacity: 1;
+	}
+
+	50% {
+		right: 120%;
+		opacity: 1;
+	}
+
+	51% {
+		right: 119%;
+		opacity: 0;
+	}
+
+	70% {
+		right: -20%;
+		opacity: 0;
+	}
+
+	71% {
+		opacity: 1; 
+	}
+
+	100% {
+		right: 45%;
+		opacity: 1;
+	}
+}
+
+@keyframes night {
+	0% {
+		right: -10%;
+	}
+
+	50% {
+		right: 45%;
+	}
+
+	100% {
+		right: 110%;
+	}
+}
+
+@keyframes clima {
+	0% {
+		background: #fbf5e8; /*dia*/
+	}
+
+	10% {
+		background: #fbf5e8; /*dia*/
+	}
+
+	20% {
+		background: #656048; /*rtansicion1*/
+	}
+
+	30% {
+		background: #39372d; /*transicion2*/
+	}
+
+	40% {
+		background: #1d1d20; /*noche*/
+	}
+
+	50% {
+		background: #1d1d20; /*noche*/
+	}
+
+	60% {
+		background: #1d1d20; /*noche*/
+	}
+
+	70% {
+		background: #39372d; /*transicion2*/
+	}
+
+	80% {
+		background: #656048; /*transision1*/
+	}
+
+	90% {
+		background: #fbf5e8; /*dia*/
+	}
+
+	100% {
+		background: #fbf5e8; /*dia*/
+	}
+}
